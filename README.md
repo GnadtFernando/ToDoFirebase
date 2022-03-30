@@ -1,4 +1,4 @@
-# estudos_firebase
+# Estudos_firebase
 
 A new Flutter project.
 
