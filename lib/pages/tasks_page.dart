@@ -22,15 +22,15 @@ class TasksPage extends StatelessWidget {
         .where("name", isEqualTo: name)
         .get()
         .then((value) {
-      value.docs.forEach((element) {
+      for (var element in value.docs) {
         FirebaseFirestore.instance
             .collection("tasks")
             .doc(element.id)
             .delete()
             .then((value) {
-          print("Success!");
+          debugPrint("Success!");
         });
-      });
+      }
     });
   }
 
